@@ -19,6 +19,7 @@ class PostListView(ListView):
         return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
 
 
+
 class PostDetailView(DetailView):
     model = Post
 
