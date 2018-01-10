@@ -119,3 +119,7 @@ venv.bak/
 
 .idea/
 todahenv
+
+.DS_Store
+
+django-env
