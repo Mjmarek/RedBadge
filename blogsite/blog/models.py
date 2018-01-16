@@ -23,6 +23,9 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def pub_date_pretty(self):
+        return self.published_date.strftime('%b %e %Y')
+
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments')
