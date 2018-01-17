@@ -1,27 +1,20 @@
-/*!*______________________*!*/
-/*!*    BACKGROUND        *!*/
-/*!*______________________*!*/
-
 html {
-    background: url(TodahBackground.svg) no-repeat center center fixed;
+    background: url('TodahBackground.svg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     margin-left: 30px;
     margin-top: 30px;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 #logo {
-    background-image: url(TodahNewLogo.svg);
+    background-image: url('TodahNewLogo.svg');
     width: 11.1vw;
     height: 4.4vh;
     object-position: inherit;
-
-
 }
-
 
 #blog {
     position: relative;
