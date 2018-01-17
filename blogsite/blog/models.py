@@ -10,7 +10,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    video = EmbedVideoField(null=True)  # same like models.URLField()
+    video = EmbedVideoField(blank=True, null=True)  # same like models.URLField()
 
     def publish(self):
         self.published_date = timezone.now()
@@ -24,10 +24,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-    def pub_date_pretty(self):
-        return self.published_date.strftime('%b %e %Y')
-
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments')
