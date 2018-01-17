@@ -1,37 +1,94 @@
-.techfont{
-  font-family: 'Russo One', sans-serif;
-  font-size: 1.5em;
-  margin-bottom: 10px;
+html {
+    background: url('TodahBackground.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-left: 30px;
+    margin-top: 30px;
+    overflow: hidden;
 }
 
-.postdate{
-  text-align: center;
+#logo {
+    background-image: url('TodahNewLogo.svg');
+    width: 11.1vw;
+    height: 4.4vh;
+    object-position: inherit;
 }
 
-.posttitle{
-  font-family: 'Russo One', sans-serif;
-  font-size: 3em;
-  text-align: center;
+#blog {
+    position: relative;
+    z-index: 2;
 }
 
-.postcontent{
-  font-family: 'Montserrat';
-  font-size: 1.5em;
+#Left-Side {
+    left: 550px;
+    border: black;
+    position: relative;
+
 }
 
-.centerstage{
-  margin-left: auto;
-  margin-right: auto;
+.sidebar {
+    background-color: greenyellow;
+    position: relative;
+    top: 20px;
+    width: 200px;
+    z-index: 100;
 }
 
-.btn-comment{
-  position: absolute;
-  right: 0px;
-}
-
-.bigbrand{
-  font-size: 1.5em;
+#Right-Side {
+    left: 100px;
 }
 
 
+/****************
+ * Pretify demo *
+ ****************/
+.h1 {
+    float: left;
+    margin: 25px;
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+}
+
+.techfont {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.postdate {
+    text-align: center;
+}
+
+.posttitle {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+.postcontent {
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+}
+
+.centerstage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-comment {
+    position: absolute;
+    right: 0px;
+}
+
+.bigbrand {
+    font-size: 1.5em;
+}
+
+/*ENVELOPES*/
 
