@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.core.urlresolvers import reverse
+from embed_video.fields import EmbedVideoField
 
 
 class Post(models.Model):
@@ -9,6 +10,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    video = EmbedVideoField(blank=True, null=True)  # same like models.URLField()
 
     def publish(self):
         self.published_date = timezone.now()
@@ -22,9 +24,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-    def pub_date_pretty(self):
-        return self.published_date.strftime('%b %e %Y')
 
 
 class Comment(models.Model):
@@ -43,3 +42,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+
+
+

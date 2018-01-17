@@ -123,3 +123,5 @@ todahenv
 .DS_Store
 
 django-env
+
+db.sqlite3
