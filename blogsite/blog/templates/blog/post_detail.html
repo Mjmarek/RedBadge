@@ -1,5 +1,7 @@
 {% extends 'blog/base.html' %}
 
+{% load embed_video_tags %}
+
 {% block content %}
 
 
@@ -22,7 +24,10 @@
           <a class="btn btn-primary" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
       {% endif %}
 
+    {% video object.video as my_video %}
 
+      {% video my_video "medium" %}
+    {% endvideo %}
 
   <hr>
   <a class="btn btn-primary btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
