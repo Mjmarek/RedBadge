@@ -6,26 +6,200 @@ html {
     background-size: cover;
     margin-left: 30px;
     margin-top: 30px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
-#logo {
-    background-image: url('TodahNewLogo.svg');
-    width: 11.1vw;
-    height: 4.4vh;
-    object-position: inherit;
+
+@media (min-width: 680px), screen and (orientation: portrait)
+{ #TodahLogo {width:30em;}}
+
+.vertical-menu {
+    width: 275px; /* Set a width if you like */
+    margin-left: 0;
 }
+
+.vertical-menu ul{
+    list-style: none;
+    padding-left: 2px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 36px;
+}
+
+.vertical-menu a {
+    background-color: transparent; /* background color */
+    color: #42BDD6; /*font color*/
+    display: block; /* Make the links appear below each other */
+    padding: 0px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    color: #007997; /* font color on mouse-over */
+}
+
+.vertical-menu a.active {
+    color: #183E4A; /* Add color to the "active/current" link */
+
+}
+/*menu {*/
+  /*background: #E4B363;*/
+  /*color: #EBEBD3;*/
+  /*padding: 1em 0;*/
+  /*position: relative;*/
+/*}*/
+
+/*.menu::after {*/
+  /*content: '';*/
+  /*clear: both;*/
+  /*display: block;*/
+/*}*/
+
+  /*.site-nav {*/
+    /*!*position: absolute;*!*/
+    /*top: 100%;*/
+    /*left: 0%;*/
+    /*background: #464655;*/
+    /*clip-path: circle(0px at top left);*/
+    /*transition: clip-path ease-in-out 700ms;*/
+  /*!*   display: none; *!*/
+  /*}*/
+
+  /*.site-nav--open {*/
+   /*clip-path: circle(250% at top left);*/
+   /*!* display: block;  *!*/
+  /*}*/
+
+  /*.site-nav ul {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*list-style: none;*/
+  /*}*/
+
+  /*.site-nav li {*/
+    /*border-bottom: 1px solid #575766;*/
+  /*}*/
+
+  /*.site-nav li:last-child {*/
+    /*border-bottom: none;*/
+  /*}*/
+
+  /*.site-nav a {*/
+    /*color: #EBEBD3;*/
+    /*display: block;*/
+    /*padding: 2em 4em 2em 1.5em;*/
+    /*text-transform: uppercase;*/
+    /*text-decoration: none;*/
+  /*}*/
+
+  /*.site-nav a:hover,*/
+  /*.site-nav a:focus {*/
+    /*background: #E4B363;*/
+    /*color: #464655;*/
+  /*}*/
+
+  /*.site-nav--icon {*/
+    /*display: block;*/
+    /*font-size: 1.5em;*/
+    /*margin-left: 1em;*/
+    /*width: 1.1em;*/
+    /*text-align: right;*/
+    /*color: rgba(255,255,255,.4);*/
+  /*}*/
+
+  /*.menu-toggle {*/
+    /*padding: 1em;*/
+    /*!*position: absolute;*!*/
+    /*top: .5em;*/
+    /*right: .5em;*/
+    /*cursor: pointer;*/
+  /*}*/
+
+  /*.hamburger,*/
+  /*.hamburger::before,*/
+  /*.hamburger::after {*/
+    /*content: '';*/
+    /*display: block;*/
+    /*background: #EBEBD3;*/
+    /*height: 3px;*/
+    /*width: 1.75em;*/
+    /*border-radius: 3px;*/
+    /*transition: all ease-in-out 500ms;*/
+  /*}*/
+
+  /*.hamburger::before {*/
+    /*transform: translateY(-6px);*/
+  /*}*/
+
+  /*.hamburger::after {*/
+    /*transform: translateY(3px);*/
+  /*}*/
+
+  /*.open .hamburger {*/
+    /*transform: rotate(45deg);*/
+  /*}*/
+
+  /*.open .hamburger::before {*/
+    /*opacity: 0;*/
+  /*}*/
+
+  /*.open .hamburger::after {*/
+    /*transform: translateY(-3px) rotate(-90deg);*/
+  /*}*/
+
+     /*@media (min-width: 700px)*/
+    /*{*/
+
+        /*.menu-toggle {*/
+        /*display: none;*/
+        /*}*/
+
+        /*.site-nav {*/
+        /*height: auto;*/
+        /*position: relative;*/
+        /*background: transparent;*/
+        /*float: right;*/
+        /*clip-path: initial;*/
+        /*}*/
+
+        /*.site-nav li {*/
+        /*display: inline-block;*/
+        /*border: none;*/
+        /*}*/
+
+        /*.site-nav a {*/
+        /*padding: 0;*/
+        /*margin-left: 3em;*/
+        /*}*/
+
+        /*.site-nav a:hover,*/
+        /*.site-nav a:focus {*/
+        /*background: transparent;*/
+        /*}*/
+
+        /*.site-nav--icon {*/
+        /*display: none;*/
+        /*}*/
+
+    /*}*/
+
+
+}
+
+#TodahLogo{
+    width: 12vw;
+}
+
 
 #blog {
     position: relative;
-    z-index: 2;
+    width: 400px;
+    height: 300px;
 }
 
 #Left-Side {
-    left: 550px;
+    left: 50px;
     border: black;
     position: relative;
-
 }
 
 .sidebar {
@@ -39,7 +213,6 @@ html {
 #Right-Side {
     left: 100px;
 }
-
 
 /****************
  * Pretify demo *
@@ -91,4 +264,7 @@ html {
 }
 
 /*ENVELOPES*/
+
+
+
 
