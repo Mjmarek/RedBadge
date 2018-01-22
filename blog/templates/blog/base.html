@@ -1,126 +1,76 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
-    <head>
-        <title>Todah Blog</title>
-        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<head>
+    <title>Todah Blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.mi.js"></script>
-    </head>
-    <body>
-        {# Layout for Background #}
-            <div id="layout" src="{% static 'css/TodahBackground.svg' %}"></div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.mi.js"></script>
+</head>
+<body>
 
+<div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img id="TodahLogo" src="{% static 'css/TodahNewLogo.svg' %}" alt="Logo">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'post_list' %}">Blog</a></li>
+                <li><a href="https://www.facebook.com/todahgive/">Facebook</a></li>
+                <li><a href="https://todahgive.com/">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'post_new' %}">New Post</a>
+                    </li>
 
-            {# Todah Logo #}
-            <div class="container">
-                <img id="TodahLogo" src="{% static 'css/TodahNewLogo.svg' %}" alt="Logo">
+                    <li>
+                        <a href="{% url 'post_draft_list' %}">Drafts</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}">Log out</a>
+                    </li>
 
-            </div>
+                    <li>
+                        <a>Welcome: {{ user.username }}</a>
+                    </li>
+                {% else %}
+                    <li><a class='nav navbar-right' href="{% url 'login' %}"><span
+                            class="glyphicon glyphicon-user"></span></a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
 
-            <div class="vertical-menu">
-                <div class="col-sm-2">
-                            <ul>
-                                <li><a href="{% url 'post_list' %}">Blog</a></li>
-                                <li><a href="https://www.facebook.com/todahgive/">Facebook</a></li>
-                                <li><a href="https://todahgive.com/">Home</a></li>
-                            </ul>
-                            <ul>
-                                 {% if user.is_authenticated %}
-                                        <li>
-                                            <a href="{% url 'post_new' %}">New Post</a>
-                                        </li>
+{# The actual blog posts#}
+           <div class=“content container”>
+               <div class=“row”>
+                   <div class=“col-md-8”>
+                       <div class=“blog_posts”>
+                           {% block content %}
+                           {% endblock %}
+                       </div>
+                   </div>
+               </div>
+           </div>
 
-                                        <li>
-                                            <a href="{% url 'post_draft_list' %}">Drafts</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'logout' %}">Log out</a>
-                                        </li>
+{# SCRIPTS #}
+<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 
-                                        <li>
-                                            <a>Welcome: {{ user.username }}</a>
-                                        </li>
-                                    {% else %}
-                                        <li><a class='nav navbar-right' href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a>
-                                        </li>
-                                    {% endif %}
-                            </ul>
-
-                  </div>
-            </div>
-
-                <!--{#<div class="envelope">#}-->
-                <!--{#  <div class="icon-envelope"></div>#}-->
-                <!--{#  <div class="header"></div>#}-->
-                <!--{#  <div class="letter"></div>#}-->
-                <!--{#</div>#}-->
-
-                {# NAVBAR WITH LINKS #}
-
-                <nav class="site-nav">
-
-                </nav>
-            </div>
-
-
-        <!--<nav class="navbar navbar-default techfont custom-navbar">-->
-            <!--<div class="container">-->
-                <!--<ul class="nav navbar-nav">-->
-                    <!--<li><a class='navbar-brand bigbrand' href="{% url 'post_list' %}">Blog</a></li>-->
-                    <!--<li><a href="https://www.facebook.com/todahgive/">Facebook</a></li>-->
-                    <!--<li><a href="https://todahgive.com/">Home</a></li>-->
-                <!--</ul>-->
-
-                <!--<ul class="nav navbar-nav navbar-right">-->
-                    <!--{% if user.is_authenticated %}-->
-                        <!--<li>-->
-                            <!--<a href="{% url 'post_new' %}">New Post</a>-->
-                        <!--</li>-->
-
-                        <!--<li>-->
-                            <!--<a href="{% url 'post_draft_list' %}">Drafts</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="{% url 'logout' %}">Log out</a>-->
-                        <!--</li>-->
-
-                        <!--<li>-->
-                            <!--<a>Welcome: {{ user.username }}</a>-->
-                        <!--</li>-->
-                    <!--{% else %}-->
-                        <!--<li><a class='nav navbar-right' href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a>-->
-                        <!--</li>-->
-                    <!--{% endif %}-->
-
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</nav>-->
-
-
-            {# The actual blog posts#}
-            <div class="content-container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="blog_posts">
-                            {% block content %}
-                            {% endblock %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        <div class="Sidebar" id="Left-Side"></div>
-        <div class="Main-Center"></div>
-        <div class="Right-Side"></div>
-        <div class="Sidebar" id="Right-Side"></div>
-
-    {# SCRIPTS #}
-    <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
-
-    </body>
+</body>
 </html>
 
 
