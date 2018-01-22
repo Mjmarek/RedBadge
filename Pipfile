@@ -10,6 +10,7 @@ django = { git = 'https://github.com/django/django.git', ref = '1.11', editable 
 gunicorn = "*"
 django-heroku = "*"
 python-dotenv = "*"
+embed_video = { git = 'https://github.com/jazzband/django-embed-video'}
 
 [requires]
 
