@@ -20,12 +20,14 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'blog/templates/blog')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "mxl&nc+snzyobo*ymse^as-6m+^x_u0c!^0(#dsibyiw#n1ay6"
+#SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['todahblog.herokuapp.com']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['todahblog.herokuapp.com']
 
 
 # Application definition
@@ -75,13 +77,24 @@ WSGI_APPLICATION = 'blogsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get("NAME_PASSWORD"),
+#         'PASSWORD': os.environ.get("DATABASE_PASSWORD"),
+#         'USER': os.environ.get("USER_PASSWORD"),
+#         'HOST': os.environ.get("HOST_PASSWORD"),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("NAME_PASSWORD"),
-        'PASSWORD': os.environ.get("DATABASE_PASSWORD"),
-        'USER': os.environ.get("USER_PASSWORD"),
-        'HOST': os.environ.get("HOST_PASSWORD"),
+        'NAME': 'todahblog',
+        'PASSWORD': 'ButT3rFl!',
+        'USER': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
