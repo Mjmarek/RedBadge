@@ -124,4 +124,9 @@ todahenv
 
 django-env
 
+# Heroku
+venv
+*.pyc
+staticfiles
+.env
 db.sqlite3

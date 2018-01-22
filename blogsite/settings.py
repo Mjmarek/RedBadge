@@ -20,7 +20,6 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'blog/templates/blog')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'mxl&nc+snzyobo*ymse^as-6m+^x_u0c!^0(#dsibyiw#n1ay6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -78,8 +77,12 @@ WSGI_APPLICATION = 'blogsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'todahblog',
+        'PASSWORD': 'ButT3rFl!',
+        'USER': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
