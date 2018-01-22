@@ -1,35 +1,249 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+{#    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
+
     <title>Title</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/clean-blog.css' %}">
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Todah</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="post.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
+        <a class="navbar-brand" href="index.html">Todah</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="post.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Page Header -->
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>Man must explore, and this is exploration at its greatest</h1>
+                    <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+                    <span class="meta">Posted by
+                          <a href="#">Start Bootstrap</a>
+                          on August 24, 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Post Content -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!--LEFT SIDEE/MODAL BUTTON  -->
+
+        <div class="col-md-2">
+            <h1>Blog History</h1>
+
+            <h2 class="section-heading">DAte</h2>
+            <blockquote class="blockquote">Loreue qui ab libero eum pariatur veritatis.</blockquote>
+        </div>
+        <!-- MIDDLE/ BLOG TITLE AND HEADING -->
+
+
+        <div class="col-md-8">
+            <h2 class="section-heading">Blog Title</h2>
+            <blockquote class="blockquote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim eligendi neque
+                in, maxime, nobis architecto voluptas culpa odio sapiente iusto quos expedita cupiditate atque qui ab
+                libero eum pariatur veritatis.
+            </blockquote>
+
+            <h2 class="section-heading">Reaching for the Stars</h2>
+            <p>Lorem, ipsum dolor sit amet consectetis saepe. Reprehenderit, deleniti debitis sunt cumque cum nisi vero
+                totam sint. Exercitationem voluptatem aliquid dolores nihil.</p>
+        </div>
+
+
+        <!-- RIGHT SIDE/ENVELOPES -->
+
+
+        <div class="col-md-2"></div>
+
+        <h2> RIBGHT SIDEE PLEASE STAY WHERE YUOU ARE</h2>
+        <!-- <div class="contact">
+          <div class="envelope">
+            <div class="top">
+              <div class="outer">
+                <div class="inner"></div>
+              </div>
+            </div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="cover"></div>
+            <span>
+              <div class="paper">
+                <button>
+                  <a class="mail" href="#">
+                    <div class="i"></div>Read More</a>
+                </button>
+                <a class="mail" href="">
+                  <div class="i"></div>Post-Title</a>
+              </div>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
+  </div>
+</div>
+</div> -->
+
+
+        <!-- <article>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <h2 class="section-heading">The Final Frontier</h2>
+
+                <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy.
+                  We predict too much for the next year and yet far too little for the next ten.</blockquote>
+
+              <h2 class="section-heading">Reaching for the Stars</h2>
+
+              <a href="#">
+                <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+              </a>
+              <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+              <p>Placeholder text by
+                <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
+                <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+            </div>
+          </div>
+          </div>
+        </article> -->
+    </div>
+</div>
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--Modal-->
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+
+                <!-- Split button -->
+
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_sidebar">
+                    <span class="glyphicon glyphicon-fullscreen"></span>
+                </button>
+
+            </div>
+
+        </div>
+        <div class="modal fade-scale" id="modal_sidebar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">More Blogs</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                            <li class="list-group-item">Item list</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</section>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.mi.js"></script>
+<script type="text/javascript" src="{% static 'js/clean-blog.js' %}"></script>
+
 </body>
 </html>
