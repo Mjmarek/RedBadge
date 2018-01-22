@@ -1,17 +1,17 @@
-html {
-    background: url('TodahBackground.svg') no-repeat center center fixed;
+html, body {
+    background: url('TodahBackground.svg') no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-left: 30px;
-    margin-top: 30px;
+    margin-left: 0px;
+    margin-top: 0px;
     /*overflow: hidden;*/
 }
 
 
 @media (min-width: 680px), screen and (orientation: portrait)
-{ #TodahLogo {width:30em;}}
+{ #TodahLogo {width: 10em;}}
 
 .vertical-menu {
     width: 275px; /* Set a width if you like */
@@ -183,7 +183,7 @@ html {
     /*}*/
 
 
-}
+
 
 #TodahLogo{
     width: 12vw;
