@@ -25,8 +25,3 @@ Anybody can browse the blogsite and read the content. In order to write a blog, 
 Copyright
 © 2018 Andrew Sieg, Ciprian Buciumean, Kathryn Vignati Ferrugia, and Monica Marek  ALL RIGHTS RESERVED 
 
-Requirements:
-python 3.6.4
-django 1.11
-django-embed-video
-nodejs?
