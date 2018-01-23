@@ -6,20 +6,20 @@ html, body {
     background-size: cover;
     margin-left: 0px;
     margin-top: 0px;
-    /*overflow: hidden;*/
 }
 
-
-@media (min-width: 680px), screen and (orientation: portrait)
-{ #TodahLogo {width: 10em;}}
+@media (min-width: 680px), screen and (orientation: portrait) {
+    #TodahLogo {
+        width: 10em;
+    }
+}
 
 #spacer {
     margin-top: 125px;
     margin-left: 0px;
 }
 
-
-#TodahLogo{
+#TodahLogo {
     width: 12vw;
 }
 
@@ -27,28 +27,27 @@ html, body {
     align-items: center;
 }
 
-.navbar-nav>li>a{
+.navbar-nav > li > a {
     justify-items: baseline;
     margin-top: 30px;
 }
 
-.navbar-brand, .navbar-nav>li>a{
+.navbar-brand, .navbar-nav > li > a {
     font-size: 28px;
     color: white;
     font-style: normal;
 }
 
-.nav>li>a:hover, .nav>li>a:focus {
+.nav > li > a:hover, .nav > li > a:focus {
     background-color: transparent;
     justify-content: space-around;
 }
 
-#placeholder{
+#placeholder {
     border-color: transparent;
 }
 
-
-#placeholderR{
+#placeholderR {
     border-color: transparent;
 }
 
@@ -58,7 +57,7 @@ html, body {
     height: 300px;
 }
 
-.OpenBorder{
+.OpenBorder {
     background-color: snow;
     border-radius: 18px;
     height: auto;
@@ -67,7 +66,7 @@ html, body {
     box-shadow: 0px 0px 15px 3px #343a40;
 }
 
-#Center-Header{
+#Center-Header {
     font-size: 40px;
     color: #1F3D49;
     margin-top: 4px;
@@ -81,7 +80,7 @@ html, body {
     margin-right: 20px;
 }
 
-#Blog-Title{
+#Blog-Title {
     font-size: 28px;
     font-style: oblique;
 }
@@ -104,11 +103,7 @@ html, body {
     left: 100px;
 }
 
-/****************
- * Pretify demo *
- ****************/
 .h1 {
-    /*float: center;*/
     margin: 25px;
     color: #333;
     font-family: 'Roboto', sans-serif;
@@ -140,7 +135,7 @@ html, body {
     margin-top: 0px;
 }
 
-#scroll{
+#scroll {
     overflow-y: auto;
 }
 
@@ -152,7 +147,7 @@ html, body {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-    text-indent: 80px;
+
 }
 
 .centerstage {
@@ -170,7 +165,7 @@ html, body {
     font-size: 1.5em;
 }
 
-/*ENVELOPES*/
+
 
 
 

@@ -3,9 +3,9 @@
 {% block content %}
     <h3>New comment</h3>
     <form method="POST" class="post-form">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" class="save btn btn-default">Post Comment</button>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Post Comment</button>
     </form>
 
     <script>var editor = new MediumEditor('.editable');</script>
