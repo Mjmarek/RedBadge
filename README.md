@@ -1,4 +1,4 @@
-# TODAH BlogSite
+# TODAH Blog Site
 
 ## Description
 The TODAH web application will be spliced into the main TODAH website. The user will be able to add blogs based on their fundraiser or experience with TODAH. All created blogs will be reviewed by the Admin who will approve the content and the post it. 
