@@ -2,6 +2,9 @@
 
 /* FORM ROWS */
 
+#placement{
+    margin: 25%;
+}
 .form-row {
     overflow: hidden;
     padding: 10px;
@@ -30,7 +33,7 @@ form .form-row p {
 
 label {
     font-weight: normal;
-    color: #666;
+    color: #003366;
     font-size: 13px;
 }
 

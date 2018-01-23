@@ -20,11 +20,11 @@ a:link, a:visited {
 }
 
 a:focus, a:hover {
-    color: #036;
+    color: #fff;
 }
 
 a:focus {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a img {
@@ -51,8 +51,15 @@ p {
     line-height: 140%;
 }
 
-h1,h2,h3,h4,h5 {
+h1,h2,h3{
     font-weight: bold;
+    font-color: #fff;
+
+}
+
+h4,h5 {
+    font-weight: bold;
+    font-style: italic;
 }
 
 h1 {
@@ -361,7 +368,7 @@ table thead th.sorted .sortoptions a.sortremove {
 }
 
 table thead th.sorted .sortoptions a.sortremove:after {
-    content: '\\';
+    content: " ";
     position: absolute;
     top: -6px;
     left: 3px;
@@ -756,6 +763,7 @@ table#change-history tbody th {
 
 #container {
     position: relative;
+    margin-top: 100px;
     width: 100%;
     min-width: 980px;
     padding: 0;
