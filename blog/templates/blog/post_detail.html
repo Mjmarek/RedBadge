@@ -1,7 +1,5 @@
 {% extends 'blog/base.html' %}
 
-{% load embed_video_tags %}
-
 {% block content %}
 
 
@@ -34,7 +32,6 @@
     <hr>
     <a class="btn btn-primary btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
     <div class="container">
-
 
         {% for comment in post.comments.all %}
             <br>
