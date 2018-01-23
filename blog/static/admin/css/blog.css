@@ -1,0 +1,176 @@
+html, body {
+    background: url('TodahBackground.svg') no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-left: 0px;
+    margin-top: 0px;
+    /*overflow: hidden;*/
+}
+
+
+@media (min-width: 680px), screen and (orientation: portrait)
+{ #TodahLogo {width: 10em;}}
+
+#spacer {
+    margin-top: 125px;
+    margin-left: 0px;
+}
+
+
+#TodahLogo{
+    width: 12vw;
+}
+
+.a.navbar {
+    align-items: center;
+}
+
+.navbar-nav>li>a{
+    justify-items: baseline;
+    margin-top: 30px;
+}
+
+.navbar-brand, .navbar-nav>li>a{
+    font-size: 28px;
+    color: white;
+    font-style: normal;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    background-color: transparent;
+    justify-content: space-around;
+}
+
+#placeholder{
+    border-color: transparent;
+}
+
+
+#placeholderR{
+    border-color: transparent;
+}
+
+#blog {
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+.OpenBorder{
+    background-color: snow;
+    border-radius: 18px;
+    height: auto;
+    width: auto;
+    border: 2px solid #1F3D49;
+    box-shadow: 0px 0px 15px 3px #343a40;
+}
+
+#Center-Header{
+    font-size: 40px;
+    color: #1F3D49;
+    margin-top: 4px;
+    margin-left: 20px;
+    color: #257692;
+}
+
+.btn-comment {
+    position: absolute;
+    right: 0px;
+    margin-right: 20px;
+}
+
+#Blog-Title{
+    font-size: 28px;
+    font-style: oblique;
+}
+
+#Left-Side {
+    left: 50px;
+    border: black;
+    position: relative;
+}
+
+.sidebar {
+    background-color: greenyellow;
+    position: relative;
+    top: 20px;
+    width: 200px;
+    z-index: 100;
+}
+
+#Right-Side {
+    left: 100px;
+}
+
+/****************
+ * Pretify demo *
+ ****************/
+.h1 {
+    /*float: center;*/
+    margin: 25px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: unset;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+}
+
+.techfont {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.postdate {
+    text-align: right;
+    padding-bottom: 18px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 2px groove #257692;
+}
+
+.posttitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 0px;
+}
+
+#scroll{
+    overflow-y: auto;
+}
+
+.postcontent {
+    word-wrap: break-word;
+    font-family: 'Roboto';
+    font-size: 1em;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    text-indent: 80px;
+}
+
+.centerstage {
+    margin-left: inherit;
+    margin-right: inherit;
+    height: content-box;
+}
+
+.btn-comment {
+    position: absolute;
+    right: 0px;
+}
+
+.bigbrand {
+    font-size: 1.5em;
+}
+
+/*ENVELOPES*/
+
+
+

@@ -5,14 +5,19 @@
     <title>Todah Blog</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/css/blog.css' %}">
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.mi.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 
 <div class="navbar navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -20,17 +25,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img id="TodahLogo" src="{% static 'css/TodahNewLogo.svg' %}" alt="Logo">
+            <a class="navbar-brand" href="#"><img id="TodahLogo" src="{% static 'admin/css/TodahNewLogo.svg' %}" alt="Logo">
             </a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'post_list' %}">Blog</a></li>
-                <li><a href="https://www.facebook.com/todahgive/">Facebook</a></li>
-                <li><a href="https://todahgive.com/">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+
+              <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
+
+                     <li>
+                        <a>Welcome: {{ user.username }}</a>
+                    </li>
+
                     <li>
                         <a href="{% url 'post_new' %}">New Post</a>
                     </li>
@@ -38,36 +44,86 @@
                     <li>
                         <a href="{% url 'post_draft_list' %}">Drafts</a>
                     </li>
+
                     <li>
                         <a href="{% url 'logout' %}">Log out</a>
                     </li>
 
-                    <li>
-                        <a>Welcome: {{ user.username }}</a>
-                    </li>
                 {% else %}
-                    <li><a class='nav navbar-right' href="{% url 'login' %}"><span
+                    <li><a class='nav navbar-center' href="{% url 'login' %}"><span
                             class="glyphicon glyphicon-user"></span></a>
                     </li>
                 {% endif %}
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://todahgive.com/">Home</a></li>
+                <li><a href="{% url 'post_list' %}">Blog</a></li>
+                <li><a href="https://www.facebook.com/todahgive/">Facebook</a></li>
+
+            </ul>
+        <br>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="container" id="spacer">
+    <div class="row">
+        <div class="col-12">
+
         </div>
     </div>
 </div>
 
-{# The actual blog posts#}
-           <div class=“content container”>
-               <div class=“row”>
-                   <div class=“col-md-8”>
-                       <div class=“blog_posts”>
+
+<div class="container-fluid">
+    <div class="row">
+
+      <!--LEFT SIDE/MODAL BUTTON  -->
+
+      <div class="col-md-2" id="placeholder">
+{#        <h1>Blog History</h1>#}
+{##}
+{#        <h2 class="section-heading">DAte</h2>#}
+{#        <blockquote class="blockquote">Loreue qui ab libero eum pariatur veritatis.</blockquote>#}
+      </div>
+      <!-- MIDDLE/ BLOG TITLE AND HEADING -->
+
+
+      <div class="col-md-8">
+          <div class="row OpenBorder">
+          <h2 class="section-heading center" id="Center-Header" >Blogs</h2>
+                   <div class="col-md-12">
+                       <div class="blog_posts" id="Blog-Title" >
                            {% block content %}
                            {% endblock %}
                        </div>
+                   <br>
                    </div>
                </div>
            </div>
 
+
+{#    right column #}
+
+          <div class="col-md-2" id="placeholderR">
+
+
+
+
+          </div>
+    </div>
+</div>
+
 {# SCRIPTS #}
+
 <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 
 </body>
